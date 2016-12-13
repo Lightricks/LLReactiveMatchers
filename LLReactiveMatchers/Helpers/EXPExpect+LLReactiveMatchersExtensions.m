@@ -10,8 +10,8 @@
 
 #import <Expecta/Expecta.h>
 
-#import <libkern/OSAtomic.h>
 #import <objc/runtime.h>
+#import <stdatomic.h>
 
 @implementation EXPExpect (LLReactiveMatchersExtensions)
 
@@ -93,7 +93,7 @@ static void *continousAsyncKey = &continousAsyncKey;
             }
             
             [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.01]];
-            OSMemoryBarrier();
+            atomic_thread_fence(memory_order_seq_cst);
             *actual = self.actual;
         }
         
