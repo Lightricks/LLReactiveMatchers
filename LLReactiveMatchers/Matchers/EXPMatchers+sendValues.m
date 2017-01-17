@@ -5,7 +5,7 @@
 #import "LLReactiveMatchersHelpers.h"
 #import "LLSignalTestRecorder.h"
 
-EXPMatcherImplementationBegin(sendValues, (id expected))
+EXPMatcherImplementationBegin(sendValues, (NSArray *expected))
 
 __block LLSignalTestRecorder *actualRecorder = nil;
 __block LLSignalTestRecorder *expectedRecorder = nil;

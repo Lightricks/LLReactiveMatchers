@@ -4,7 +4,7 @@
 #import "LLReactiveMatchersMessageBuilder.h"
 #import "LLReactiveMatchersHelpers.h"
 
-EXPMatcherImplementationBegin(sendError, (id expected))
+EXPMatcherImplementationBegin(sendError, (NSError *expected))
 
 __block LLSignalTestRecorder *actualRecorder = nil;
 __block LLSignalTestRecorder *expectedRecorder = nil;
