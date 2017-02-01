@@ -28,6 +28,7 @@
 - (NSString *) build;
 
 + (NSString *) actualNotCorrectClass:(id)actual;
++ (NSString *) expectedShouldBeOfClass:(Class)correctClass;
 + (NSString *) expectedNotCorrectClass:(id)expected;
 
 + (NSString *) actualNotFinished:(LLSignalTestRecorder *)actual;
