@@ -139,6 +139,10 @@ typedef NS_OPTIONS(NSUInteger, LLReactiveMatchersMessageBuilderRendering) {
     return [NSString stringWithFormat:@"expected: actual to be a signal or recorder: %@", actual];
 }
 
++ (NSString *) expectedShouldBeOfClass:(Class)correctClass {
+  return [NSString stringWithFormat:@"expected: expected to be of class %@", correctClass];
+}
+
 + (NSString *) expectedNotCorrectClass:(id)expected {
     return [NSString stringWithFormat:@"expected: expected to be a signal or recorder: %@",
             expected];

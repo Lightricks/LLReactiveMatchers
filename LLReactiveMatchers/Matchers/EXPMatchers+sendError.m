@@ -4,7 +4,7 @@
 #import "LLReactiveMatchersMessageBuilder.h"
 #import "LLReactiveMatchersHelpers.h"
 
-EXPMatcherImplementationBegin(sendError, (id expected))
+EXPMatcherImplementationBegin(sendError, (NSError *expected))
 
 __block LLSignalTestRecorder *actualRecorder = nil;
 __block LLSignalTestRecorder *expectedRecorder = nil;
@@ -19,7 +19,7 @@ void (^subscribe)() = ^{
 };
 
 prerequisite(^BOOL{
-    return LLRMCorrectClassesForActual(actual);
+    return LLRMCorrectClassesForActual(actual) && LLRMCorrectClassesForError(expected);
 });
 
 match(^BOOL{
@@ -30,6 +30,9 @@ match(^BOOL{
 failureMessageForTo(^NSString *{
     if(!LLRMCorrectClassesForActual(actual)) {
         return [LLReactiveMatchersMessageBuilder actualNotCorrectClass:actual];
+    }
+    if(!LLRMCorrectClassesForError(expected)) {
+      return [LLReactiveMatchersMessageBuilder expectedShouldBeOfClass:NSError.class];
     }
     if(!(actualRecorder.hasCompleted || actualRecorder.hasErrored)) {
         return [LLReactiveMatchersMessageBuilder actualNotFinished:actualRecorder];

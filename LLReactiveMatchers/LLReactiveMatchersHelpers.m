@@ -24,6 +24,14 @@ extern BOOL LLRMCorrectClassesForActual(id object) {
     return [object isKindOfClass:RACSignal.class] || [object isKindOfClass:LLSignalTestRecorder.class];
 }
 
+extern BOOL LLRMCorrectClassesForError(id object) {
+  return [object isKindOfClass:NSError.class];
+}
+
+extern BOOL LLRMCorrectClassesForValues(id object) {
+  return [object isKindOfClass:NSArray.class];
+}
+
 extern LLSignalTestRecorder *LLRMRecorderForObject(id object) {
     if([object isKindOfClass:LLSignalTestRecorder.class]) {
         return object;
