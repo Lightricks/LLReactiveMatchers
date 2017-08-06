@@ -4,7 +4,7 @@
 #import "EXPMatchers+deliverValuesOnThread.h"
 
 #import <Expecta/NSValue+Expecta.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 #import "LLReactiveMatchersHelpers.h"
 
 EXPMatcherImplementationBegin(deliverValuesOnThread, (NSThread *expected)) {

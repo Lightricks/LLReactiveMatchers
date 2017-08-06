@@ -6,7 +6,7 @@
 //
 //
 
-#import <ReactiveCocoa/RACSignal.h>
+#import <ReactiveObjC/RACSignal.h>
 
 // Starts and Stops counting the subscriptions to a Signal.
 @interface RACSignal (LLSubscriptionCounting)

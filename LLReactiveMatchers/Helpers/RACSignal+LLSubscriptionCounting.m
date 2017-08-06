@@ -8,7 +8,7 @@
 
 #import "RACSignal+LLSubscriptionCounting.h"
 
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 #import <objc/runtime.h>
 

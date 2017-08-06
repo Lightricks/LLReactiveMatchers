@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 /// This class is used to record the events sent by a Signal for asserting against procedurall
 /// It will behave similarly to RACReplaySubject, it will send all events that the

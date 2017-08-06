@@ -1,6 +1,6 @@
 #import "EXPMatchers+matchValues.h"
 
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface EXPMatchers_matchValuesTests : TEST_SUPERCLASS
 @end

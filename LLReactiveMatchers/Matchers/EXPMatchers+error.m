@@ -1,6 +1,6 @@
 #import "EXPMatchers+error.h"
 
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 #import "LLSignalTestRecorder.h"
 #import "LLReactiveMatchersHelpers.h"
 #import "LLReactiveMatchersMessageBuilder.h"
